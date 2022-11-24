@@ -13,12 +13,16 @@ pipeline{
                     git branch: 'main', url: 'https://github.com/shubhambadade007/demo-counter-app.git'
                 }
             }
-            stage("unit testing"){
-                steps{
+        }
+        stage('UNIT testing'){
+            
+            steps{
+                
+                script{
+                    
                     sh 'mvn test'
                 }
             }
-        
+        }
     }
-        
 }
